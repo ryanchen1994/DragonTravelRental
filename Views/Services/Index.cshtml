@@ -1,0 +1,29 @@
+﻿@model List<DragonTravelRental.Models.Service>
+
+@{
+    ViewData["Title"] = "我們的服務";
+}
+
+<div class="hero" style="background-image: url('/images/services-bg.jpg');">
+    <div class="hero-content">
+        <h1>我們的服務</h1>
+        <p>為您提供高品質的租車體驗</p>
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            @foreach (var service in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <i class="fas fa-@service.Icon"></i>
+                        <h3>@service.Name</h3>
+                        <p>@service.Description</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
